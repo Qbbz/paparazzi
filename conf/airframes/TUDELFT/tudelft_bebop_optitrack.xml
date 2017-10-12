@@ -34,6 +34,31 @@
     <module name="logger_file">
       <define name="FILE_LOGGER_PATH" value="/data/ftp/internal_000"/>
     </module>
+	<!-- Video/Camera modules -->
+	<module name="video_thread"/>
+	<module name="bebop_ae_awb">
+		<define name="BEBOP_AE_AWB_AV" value="1" />
+		<define name="BEBOP_AE_AWB_VERBOSE" value="0" />
+	</module>
+	<!--<module name="cv_colorfilter">
+			<define name="COLORFILTER_CAMERA" value="bottom_camera" />-->
+	</module>
+	<module name="video_rtp_stream">
+		<configure name="VIEWVIDEO_HOST" value="192.168.42.36" /> <!--change to your HOST IP terminal ->ifconfig -->
+		<configure name="VIEWVIDEO_BROADCAST" value="FALSE" />
+		<define name="VIEWVIDEO_CAMERA" value="bottom_camera" />
+		<define name="VIEWVIDEO_SHOT_PATH" value="/data/ftp/internal_000" />
+		<define name="VIEWVIDEO_DOWNSIZE_FACTOR" value="1" />
+        <define name="VIEWVIDEO_QUALITY_FACTOR" value="50" />
+		<define name="VIEWVIDEO_FPS" value="90" />
+		<define name="VIEWVIDEO_WRITE_VIDEO" value="FALSE" />
+		<define name="VIEWVIDEO_VIDEO_FILE" value="orangeAvoider" />
+		<define name="VIEWVIDEO_STREAM_VIDEO" value="TRUE" />
+	</module>
+	<module name="cv_qrcode">
+    			<define name="QRCODE_CAMERA" value="bottom_camera"/>
+    			<define name="QRCODE_DRAW_RECTANGLE" value="FALSE"/>
+	</module>
   </modules>
 
   <commands>
@@ -44,10 +69,10 @@
   </commands>
 
   <servos driver="Default">
-    <servo name="TOP_RIGHT" no="0" min="3000" neutral="3000" max="12000"/>
-    <servo name="TOP_LEFT" no="1" min="3000" neutral="3000" max="12000"/>
-    <servo name="BOTTOM_LEFT" no="2" min="3000" neutral="3000" max="12000"/>
-    <servo name="BOTTOM_RIGHT" no="3" min="3000" neutral="3000" max="12000"/>
+    <servo name="TOP_LEFT" no="0" min="3000" neutral="3000" max="12000"/>
+    <servo name="TOP_RIGHT" no="1" min="3000" neutral="3000" max="12000"/>
+    <servo name="BOTTOM_RIGHT" no="2" min="3000" neutral="3000" max="12000"/>
+    <servo name="BOTTOM_LEFT" no="3" min="3000" neutral="3000" max="12000"/>
   </servos>
 
   <section name="MIXING" prefix="MOTOR_MIXING_">
