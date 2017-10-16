@@ -41,8 +41,8 @@
 		<define name="BEBOP_AE_AWB_VERBOSE" value="0" />
 	</module>
 	<!--<module name="cv_colorfilter">
-			<define name="COLORFILTER_CAMERA" value="bottom_camera" />-->
-	</module>
+			<define name="COLORFILTER_CAMERA" value="bottom_camera" />
+	</module>-->
 	<module name="video_rtp_stream">
 		<configure name="VIEWVIDEO_HOST" value="192.168.42.36" /> <!--change to your HOST IP terminal ->ifconfig -->
 		<configure name="VIEWVIDEO_BROADCAST" value="FALSE" />
@@ -55,9 +55,12 @@
 		<define name="VIEWVIDEO_VIDEO_FILE" value="orangeAvoider" />
 		<define name="VIEWVIDEO_STREAM_VIDEO" value="TRUE" />
 	</module>
-	<module name="cv_qrcode">
+	<!--<module name="cv_blob_locator" dir="computer_vision">
+    		<define name="BLOB_LOCATOR_CAMERA" value="bottom_camera"/>
+	</module>-->
+	<module name="cv_qr_locator">
     			<define name="QRCODE_CAMERA" value="bottom_camera"/>
-    			<define name="QRCODE_DRAW_RECTANGLE" value="FALSE"/>
+    			<define name="QRCODE_DRAW_RECTANGLE" value="TRUE"/>
 	</module>
   </modules>
 

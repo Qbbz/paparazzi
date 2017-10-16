@@ -64,7 +64,7 @@ void georeference_project(struct camera_frame_t *tar, int wp)
 
   // Camera <-> Body
   // Looking down in body frame
-  // Bebop has 180deg Z rotation in camera (butt up yields normal webcam)
+  // Bebop has 180deg Z rotation in camera (butt up yields normal webcam) #TODO(is it 180deg? or 90deg?)
   struct Int32RMat body_to_cam_rmat;
   INT32_MAT33_ZERO(body_to_cam_rmat);
   MAT33_ELMT(body_to_cam_rmat, 0, 0) = -1 << INT32_TRIG_FRAC;
@@ -155,26 +155,25 @@ int32_t focus_length;
 void georeference_run(void)
 {
   struct camera_frame_t target;
-  target.w = 320;
+  target.w = 240;
   target.h = 240;
   target.f = focus_length;
   target.px = 0;
   target.py = 0;
   georeference_project(&target,WP_p1);
-  target.px = 320;
+  target.px = 240;
   target.py = 0;
   georeference_project(&target,WP_p2);
-  target.px = 320;
+  target.px = 240;
   target.py = 240;
   georeference_project(&target,WP_p3);
   target.px = 0;
   target.py = 240;
   georeference_project(&target,WP_p4);
-
   target.px = 0;
   target.py = 120;
   georeference_project(&target,0);
-  georeference_filter(FALSE, WP_CAM,50);
+  georeference_filter(FALSE, WP_CAM, 50);
 }
 
 void georeference_init(void)
@@ -187,7 +186,7 @@ void georeference_init(void)
   INT32_VECT3_ZERO(geo.filter.v);
   INT32_VECT3_ZERO(geo.filter.x);
   geo.filter.P = 0;
-  focus_length = 400;
+  focus_length = 400; //TODO
 }
 
 

@@ -30,7 +30,10 @@
 #ifndef DETECT_WINDOW_FPS
 #define DETECT_WINDOW_FPS 0       ///< Default FPS (zero means run at camera fps)
 #endif
-PRINT_CONFIG_VAR(DETECT_WINDOW_FPS)
+//PRINT_CONFIG_VAR(DETECT_WINDOW_FPS)
+#ifndef DETECT_WINDOW_CAMERA
+#define DETECT_WINDOW_CAMERA bottom_camera       ///< Default FPS (zero means run at camera fps)
+#endif
 
 #include "cv.h"
 #include "detect_window.h"

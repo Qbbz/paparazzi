@@ -27,7 +27,6 @@
 #ifndef GPS_H
 #define GPS_H
 
-
 #include "std.h"
 #include "math/pprz_geodetic_int.h"
 #include "math/pprz_geodetic_float.h"
