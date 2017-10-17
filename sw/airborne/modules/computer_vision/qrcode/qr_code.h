@@ -36,6 +36,7 @@
 extern bool drawRectangleAroundQRCode;
 extern void qrcode_init(void);
 extern struct image_t *qrscan(struct image_t *img);
+extern bool Check_qrcode_located(void);
 
 extern int geofilter_length;
 

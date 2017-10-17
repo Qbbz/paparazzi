@@ -152,7 +152,7 @@ void georeference_filter(bool kalman, int wp, int length)
 
 int32_t focus_length;
 
-void georeference_run(void)
+/*void georeference_run(void) //not yet included because have to find out how it works
 {
   struct camera_frame_t target;
   target.w = 240;
@@ -174,7 +174,7 @@ void georeference_run(void)
   target.py = 120;
   georeference_project(&target,0);
   georeference_filter(FALSE, WP_CAM, 50);
-}
+}*/
 
 void georeference_init(void)
 {

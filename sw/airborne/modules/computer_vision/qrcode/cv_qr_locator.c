@@ -33,6 +33,7 @@
 #include "modules/computer_vision/cv_georeference.h"
 #include "generated/flight_plan.h"
 int geofilter_length = 5;
+int qrcode_located = 0; //variable holds the state of detection of qrcode (0 = nothing detected, 1 = detected qrcode)
 
 #ifndef QRCODE_DRAW_RECTANGLE
 #define QRCODE_DRAW_RECTANGLE TRUE
@@ -124,6 +125,7 @@ struct image_t *qrscan(struct image_t *img)
 	#ifdef WP_CAM
         georeference_filter(TRUE, WP_CAM, geofilter_length);
     #endif
+    qrcode_located = 1;
 
 
     if (drawRectangleAroundQRCode) {
@@ -157,4 +159,12 @@ struct image_t *qrscan(struct image_t *img)
   //zbar_image_scanner_destroy(scanner);
 
   return img;
+}
+
+bool Check_qrcode_located(void)
+{
+	if (qrcode_located == 1){
+		return true;
+	}
+	return false;
 }
