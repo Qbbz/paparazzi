@@ -42,7 +42,7 @@ bool drawRectangleAroundQRCode = QRCODE_DRAW_RECTANGLE;
 #ifndef QRCODE_FPS
 #define QRCODE_FPS 0       ///< Default FPS (zero means run at camera fps)
 #endif
-//PRINT_CONFIG_VAR(QRCODE_FPS)
+PRINT_CONFIG_VAR(QRCODE_FPS)
 
 void qrcode_init(void)
 {
@@ -121,8 +121,8 @@ struct image_t *qrscan(struct image_t *img)
     #ifdef WP_p1
         georeference_project(&cam, WP_p1);
     #endif
-    #ifdef WP_CAM
-        georeference_filter(FALSE, WP_CAM, geofilter_length);
+	#ifdef WP_CAM
+        georeference_filter(TRUE, WP_CAM, geofilter_length);
     #endif
 
 

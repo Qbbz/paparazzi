@@ -61,6 +61,7 @@
 	<module name="cv_qr_locator">
     			<define name="QRCODE_CAMERA" value="bottom_camera"/>
     			<define name="QRCODE_DRAW_RECTANGLE" value="TRUE"/>
+			<define name = "QRCODE_FPS" value = "1"/>
 	</module>
   </modules>
 
