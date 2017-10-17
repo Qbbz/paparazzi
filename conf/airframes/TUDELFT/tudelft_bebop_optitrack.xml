@@ -50,7 +50,7 @@
 		<define name="VIEWVIDEO_SHOT_PATH" value="/data/ftp/internal_000" />
 		<define name="VIEWVIDEO_DOWNSIZE_FACTOR" value="1" />
         <define name="VIEWVIDEO_QUALITY_FACTOR" value="50" />
-		<define name="VIEWVIDEO_FPS" value="90" />
+		<define name="VIEWVIDEO_FPS" value="30" />
 		<define name="VIEWVIDEO_WRITE_VIDEO" value="FALSE" />
 		<define name="VIEWVIDEO_VIDEO_FILE" value="orangeAvoider" />
 		<define name="VIEWVIDEO_STREAM_VIDEO" value="TRUE" />
@@ -60,7 +60,7 @@
 	</module>-->
 	<module name="cv_qr_locator">
     			<define name="QRCODE_CAMERA" value="bottom_camera"/>
-    			<define name="QRCODE_DRAW_RECTANGLE" value="TRUE"/>
+    			<!--<define name="QRCODE_DRAW_RECTANGLE" value="TRUE"/>-->
 			<define name = "QRCODE_FPS" value = "1"/>
 	</module>
   </modules>
