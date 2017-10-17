@@ -44,7 +44,7 @@
 			<define name="COLORFILTER_CAMERA" value="bottom_camera" />
 	</module>-->
 	<module name="video_rtp_stream">
-		<configure name="VIEWVIDEO_HOST" value="192.168.42.10" /> <!--change to your HOST IP terminal ->ifconfig -->
+		<configure name="VIEWVIDEO_HOST" value="192.168.42.36" /> <!--change to your HOST IP terminal ->ifconfig -->
 		<configure name="VIEWVIDEO_BROADCAST" value="FALSE" />
 		<define name="VIEWVIDEO_CAMERA" value="bottom_camera" />
 		<define name="VIEWVIDEO_SHOT_PATH" value="/data/ftp/internal_000" />
@@ -61,6 +61,9 @@
 	<module name="cv_qr_locator">
     	<define name="QRCODE_CAMERA" value="bottom_camera"/>
     	<define name="QRCODE_DRAW_RECTANGLE" value="TRUE"/>
+		<define name = "QRCODE_FPS" value = "1"/>
+    	<define name="QRCODE_CAMERA" value="bottom_camera"/>
+    	<!--<define name="QRCODE_DRAW_RECTANGLE" value="TRUE"/>-->
 		<define name = "QRCODE_FPS" value = "1"/>
 	</module>
   </modules>
@@ -210,7 +213,7 @@
   </section>
 
   <section name="NAVIGATION" prefix="NAV_">
-    <define name="CLIMB_VSPEED" value="2.0"/>
+    <define name="CLIMB_VSPEED" value="2.5"/>
     <define name="DESCEND_VSPEED" value="-1.0"/>
   </section>
 
