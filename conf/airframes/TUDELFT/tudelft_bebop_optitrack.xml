@@ -50,7 +50,7 @@
 		<define name="VIEWVIDEO_SHOT_PATH" value="/data/ftp/internal_000" />
 		<define name="VIEWVIDEO_DOWNSIZE_FACTOR" value="1" />
         <define name="VIEWVIDEO_QUALITY_FACTOR" value="50" />
-		<define name="VIEWVIDEO_FPS" value="90" />
+		<define name="VIEWVIDEO_FPS" value="30" />
 		<define name="VIEWVIDEO_WRITE_VIDEO" value="FALSE" />
 		<define name="VIEWVIDEO_VIDEO_FILE" value="orangeAvoider" />
 		<define name="VIEWVIDEO_STREAM_VIDEO" value="TRUE" />
@@ -60,10 +60,7 @@
 	</module>-->
 	<module name="cv_qr_locator">
     	<define name="QRCODE_CAMERA" value="bottom_camera"/>
-    	<define name="QRCODE_DRAW_RECTANGLE" value="TRUE"/>
-		<define name = "QRCODE_FPS" value = "1"/>
-    	<define name="QRCODE_CAMERA" value="bottom_camera"/>
-    	<!--<define name="QRCODE_DRAW_RECTANGLE" value="TRUE"/>-->
+    	<define name="QRCODE_DRAW_RECTANGLE" value="FALSE"/>
 		<define name = "QRCODE_FPS" value = "1"/>
 	</module>
   </modules>
@@ -213,7 +210,7 @@
   </section>
 
   <section name="NAVIGATION" prefix="NAV_">
-    <define name="CLIMB_VSPEED" value="2.5"/>
+    <define name="CLIMB_VSPEED" value="1.5"/>
     <define name="DESCEND_VSPEED" value="-1.0"/>
   </section>
 
@@ -235,7 +232,7 @@
   <section name="BAT">
     <define name="MILLIAMP_AT_FULL_THROTTLE" value="8700"/>
     <define name="CATASTROPHIC_BAT_LEVEL" value="9.9" unit="V"/>
-    <define name="CRITIC_BAT_LEVEL" value="11.0" unit="V"/>
+    <define name="CRITIC_BAT_LEVEL" value="10.4" unit="V"/>
     <define name="LOW_BAT_LEVEL" value="11.1" unit="V"/>
     <define name="MAX_BAT_LEVEL" value="12.4" unit="V"/>
   </section>
